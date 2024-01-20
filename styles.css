@@ -1,0 +1,197 @@
+body {
+    text-align: center;
+    background-color: rgb(64, 112, 110);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Chakra Petch', sans-serif;
+    background: linear-gradient(-45deg, #52cc52, #ff8a00, #00a0ff, #ff0080);
+    background-size: 400% 400%;
+    animation: gradient 60s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive design  */
+@media only screen and (max-width: 600px) {
+    .gradient-background {
+        background-size: 800% 800%;
+    }
+}
+
+/* Additional media queries for other screen sizes if needed */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for medium-sized screens */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Styles for larger screens */
+}
+
+
+#header-title {
+    animation: textGradient 60s ease infinite;
+    font-size: 250%;
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 5px;
+}
+
+@keyframes textGradient {
+    0% {
+        color: white;
+    }
+
+    25% {
+        color: black;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    75% {
+        color: blue;
+    }
+
+    100% {
+        color: purple;
+    }
+}
+
+
+
+#time {
+    font-size: 150%;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 5px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+#game-over-text {
+    font-family: 'Barlow', sans-serif;
+}
+
+
+/* Card css  */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.flip-card {
+    background-color: transparent;
+    margin: 1%;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+@media only screen and (max-width: 600px) {
+    .flip-card {
+        margin: 2%;
+    }
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.fliped {
+    transform: rotateY(180deg) !important;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .flip-card-back {
+        padding: 10%; /* Adjust padding for better spacing on smaller screens */
+    }
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+    width: 100px;
+    height: 100px;
+    margin-top: 50%;
+    margin-left: 20%;
+    padding: 5%;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+    display: block;
+}
+
+
+/* Responsive design  */
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .card-row {
+        flex-direction: column;
+        /* Stack cards vertically on smaller screens */
+    }
+
+    /* Add more specific styles as needed for better responsiveness */
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        /* Adjust font size for medium-sized screens */
+    }
+
+    /* Add styles to adjust layout for tablets */
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+    /* Add styles for larger screens */
+}
